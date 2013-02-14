@@ -112,7 +112,7 @@ module.exports = function(oauth, users, order, messagecount, callback)
             var tweets = "";
 
             _.each(reply, function(tweet){
-                tweets += tweet.text.replace(/@\w*/g, "").replace(/RT:?/g, "").replace(/https?:[\w\/]*/g, "") + "\n";
+                tweets += tweet.text.replace(/@\w*/g, "").replace(/RT:?/g, "").replace(/https?:[\w\/\.]*/g, "") + "\n";
             });
 
             var userchain = markov(order);
