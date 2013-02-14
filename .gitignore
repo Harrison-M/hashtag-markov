@@ -1,0 +1,4 @@
+node_modules
+website/node_modules
+example/config.js
+website/config.js

@@ -1,0 +1,22 @@
+doctype 5
+html(lang="en")
+    head
+        title
+            | #markov
+    body
+        h1
+            | #markov
+        h2
+            | Generate a Twitter conversation based on usernames
+        form
+            p
+                label(for="names")
+                    | Input a list of users separated by commas (2-3 works best):
+                input(name="names",type="text",value=names)
+            p
+                label(for="order")
+                    | Order of the markov chain (higher number means less randomness, 1-2 works best, higher will produce boring or unexpected results):
+                input(name="order",type="text",value=order)
+            input(type="submit",value="Generate")
+        #results 
+            | !{conversation}

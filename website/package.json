@@ -1,0 +1,11 @@
+{
+    "name": "hashtag-markov",
+    "description": "Automatically generate a Twitter conversation based on two feeds",
+    "version": "0.0.1",
+    "main": "./index.js",
+    "dependencies": {
+        "express": "*",
+        "jade": "*",
+        "underscore": "*"
+    }
+}
