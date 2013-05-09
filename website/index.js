@@ -5,7 +5,7 @@ var _ = require('underscore');
 
 var app = express();
 
-//app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
     if(req.query.names){
@@ -31,8 +31,15 @@ app.get('/', function(req, res){
                 return;
             }
 
-            _.each(messages, function(message){
-                result += "<p>";
+            var filtered = _.filter(messages, function(message){
+                return !!message.tweet;
+            });
+
+            _.each(filtered, function(message, i){
+                if(i % 2 == 0)
+                  result += "<p class='even'>";
+                else
+                  result += "<p class='odd'>";
                 result += "<strong>@" + message.user + ": </strong>";
                 result += message.tweet;
                 result += "</p>\n";

@@ -1,7 +1,7 @@
 {
-    "name": "hashtag-markov",
+    "name": "hashtag-markov-web",
     "description": "Automatically generate a Twitter conversation based on two feeds",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "./index.js",
     "dependencies": {
         "express": "*",
